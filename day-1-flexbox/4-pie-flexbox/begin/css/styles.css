@@ -34,19 +34,18 @@ nav ul {
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
   overflow: auto;
+  width: 100%;
 
 }
 /* splits nav into 2 columns
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
-nav li:nth-child(even) {
-  width: 50%;
-  float: right;
-  padding: 0.5em;
+.row {
+  display: flex;
+  flex-flow: row wrap;
 }
-nav li:nth-child(odd) {
-  width: 50%;
-  float: left;
-    padding: 0.5em;
+nav li {
+  flex: 0 0 calc(50% - 2em);
+  padding: 0.5em;
 }
 nav a {
   color: #c80060;

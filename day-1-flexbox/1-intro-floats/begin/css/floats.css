@@ -31,13 +31,61 @@ div img {
 }
 
 /* grid system -- mobile first! */
-
+.row-1 article, .row-2 article, .row-3 article, .row-4 article {
+	width: 98%;
+	margin: 1%;
+}
+.row-1:after, .row-2:after, .row-3:after, .row-4:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.row-1 article {
+	background: pink;
+}
+.row-2 article {
+	background: aqua;
+}
+.row-3 article {
+	background: palegoldenrod;
+}
+.row-4 article {
+	background: salmon;
+}
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
-
+	.row-1 article {
+		float: left;
+		width: 48%;
+	}
+	.row-2 article {
+		float: left;
+		width: 48%;
+	}
+	.row-3 article {
+		float: left;
+		width: 98%;
+	}
+	.row-3 article:first-child {
+		width: 98%;
+	}
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-
+	.row-1 article {
+		float: left;
+		width: 23%;
+	}
+	.row-2 article {
+		float: left;
+		width: 48%;
+	}
+	.row-3 article {
+		float: left;
+		width: 73%;
+	}
+	.row-3 article:first-child {
+		width: 23%;
+	}
 }
